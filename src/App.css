@@ -1,38 +1,744 @@
-.App {
-  text-align: center;
+@keyframes fly {
+  from{right: -60%; }
+  to{right: 0%; }
+}
+/* @keyframes mughees {
+  from{left: -20rem;}
+  to{left:0rem}
+} */
+@keyframes color {
+  from {color:whitesmoke;}
+  to {color: rgb(255, 255, 255);}
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes colorChange {
+  from {border-color: black;}
+  to {border-color: #0d416f;}
+}
+@keyframes btn {
+  from{background-color: whitesmoke;}
+  to{background-color: #0d416f;}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes sliderheading {
+  from {top: -15rem; }
+  to {top : 15rem}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Cabin', sans-serif;
+}
+
+
+
+.navbar{
+  height: 4.5rem;
+  background-color:rgb(255, 255, 255);
   display: flex;
-  flex-direction: column;
+  border-bottom: 1px solid gray;
+  box-shadow: 1px 1px 4px black;
+  align-items: center;
+  z-index: 9;
+}
+
+.Bg{
+  background: rgb(8,119,115);
+background: linear-gradient(317deg, rgba(8,119,115,1) 44%, rgba(7,91,88,1) 81%);
+  height: 6rem;
+}
+
+.logo{
+  width: 150px;
+  height: 80px;
+  padding-left: 2rem;
+}
+
+.logo img{
+  width: 100%;
+  height: 100%;
+}
+
+.subnav{
+  width: 70%;
+  display: flex;
+}
+.categories {
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.cat-list{
+  list-style: none;
+  display: inline;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
+}
+
+.categories a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.categories a:hover{
+ color:  rgb(4, 61, 60);
+ ;
+}
+
+.contact-email{
+  padding-left: 16rem;
+  display: flex;
+  align-items: center;
+}
+
+.details{
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.detail{
+  padding: 1rem;
+}
+.contact{
+  font-size: 20px;
+  color: rgb(248, 237, 237);
+}
+
+.contact-img{
+  width: 30px;
+  height: 30px;
+}
+
+.contact-img img{
+  width: 100%;
+  height: 100%;
+}
+.fafa{
+  display: none;
+}
+
+.cat-list{
+  display: inline;
+}
+.icon-section{
+  display: flex;
+}
+.icon-btn{
+  width: 30px;
+  height: 30px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: flex;
+  margin-left: 1rem;
+  border-radius: 50%;
+}
+
+.icon-btn img{
+  width: 100%;
+  height: 100%;
+}
+
+.Heading{
+  position: absolute;
+  top: 15rem;
   color: white;
+  left: 5rem;
+  width: fit-content;
+  animation-name: sliderheading;
+  animation-duration: 1s;
 }
 
-.App-link {
-  color: #61dafb;
+.Heading button{
+  padding: 1rem;
+  width: 10rem;
+  font-size: 25px;
+  width: fit-content;
+  margin-left: 4rem;
+  background-color:rgb(4, 61, 60) ;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 10px rgb(135, 134, 134);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Heading button:hover{
+  box-shadow: 2px 2px 20px rgb(135, 134, 134);
+}
+
+/* slider */
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+margin-top: -200px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+.card-container{
+  background-color: whitesmoke;
+}
+
+.card-container h2{
+  width: fit-content;
+  padding: 1rem 0rem 0rem 4rem;
+  font-size: 30px;
+}
+.current{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: .5rem 2rem 2rem 2rem;
+  margin-top: 2rem;
+}
+.current-card{
+  background-color:rgb(255, 255, 255);
+  width: 14rem;
+  height: 23rem;
+  box-shadow: rgba(175, 175, 175, 0.16) 0px 1px 4px;
+  padding-top: 2rem;
+  border-radius: 10px;
+}
+.current-card:hover{
+box-shadow: 0px 0 35px 0 rgb(0 0 0 / 15%);
+  
+}
+.current-card h3{
+  width: fit-content;
+  margin: auto;
+  padding-top: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.current-card p{
+  padding: 12px;
+}
+
+.image{
+  width: 7rem;
+  height: 7rem;
+  background: rgb(8,119,115);
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  
+}
+.image img{
+  width: 60%;
+  height: 60%;
+  
+}
+
+
+.card img{
+  width: 100%;
+  height: 10rem;
+}
+
+
+.intro{
+  display: flex;
+  background-color: white;
+  width: 90%;
+  margin:auto;
+  margin-top: 2rem;
+  justify-content: space-around;
+}
+.facebook{
+  background-color: rgb(44, 119, 169);
+  width: 66%;
+  height: 35rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.facebook h1{
+  width: fit-content;
+}
+
+.events{
+  background-color: rgb(19, 16, 16);
+  width: 18rem;
+  border-radius: 10px;
+  height: 35rem;
+}
+
+.event-details{
+  height: 7.5rem;
+  width: 90%;
+  margin: auto;
+  border-bottom: 1px solid whitesmoke;
+}
+.event-details p,h3{
+  color: whitesmoke;
+}
+
+
+
+.ctaBtn{
+  background-color: rgb(255, 255, 255);
+  padding: .7rem;
+  color: rgb(8,119,115);
+  font-size: 1.3rem;
+  border-radius: .3rem;
+  /* box-shadow: 0px 3px 2px 5px grey; */
+  border: none;
+  cursor:  pointer;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+
+}
+
+.ctaBtn:hover{
+  box-shadow: 0 10px 16px 0 rgba(84, 84, 84, 0.2);
+}
+
+.slider {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  height: 500px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.arrow {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in .1s;
+}
+
+.nextArrow {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  z-index: 999;
+  color: #fff;
+}
+
+.backArrow {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  z-index: 999;
+  color: #fff;
+}
+
+.fa-arrow-right:before, .fa-arrow-left:before {
+  color: #222
+}
+
+#vids {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#vids a:first-of-type {
+  margin-bottom: 5px;
+}
+
+
+
+
+
+/* mobile responsive */
+
+
+@media screen and (max-width:380px) {
+  .navbar{
+      height: 6rem;
+      background-color: #0d416f;
+      display: flex;
+      align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  
+  .logo{
+      width: 150px;
+      height: 80px;
+      padding-left: 1 rem;
   }
+  
+  .logo img{
+      width: 100%;
+      height: 100%;
+  }
+  
+  .categories {
+      display: none;
+  }
+  .contact-email{
+      display: none;
+  }
+  .fafa{
+      display: inline;
+      position: absolute;
+      width: fit-content;
+      right: 2rem;
+  }
+
+  .fafa button{
+      outline: none;
+      border: 1.5px solid white;
+      border-radius: 5px;
+      padding: 5px;
+      background-color: transparent;
+      cursor: pointer;
+  }
+  .fafa img{
+      width: 1.25rem;
+      height: 1rem;
+  }
+  .ctaBtn{
+    display: none;
+  }
+  .showCategories{
+      display: inline;
+      height: 15.7rem;
+      text-align: left;
+      top: 6rem;
+      width: 50%;
+      right: 0px;
+      position: absolute;
+      background-color:#222;
+      transition: height 1s;
+      box-shadow: 1px 1px 4px black;
+      animation-name: fly;
+      animation-duration: 1s;
+      z-index: 1;
+      
+  }
+  .cat-list{
+      width: 100%;
+      margin: auto;
+      display: block;
+      padding: .5rem;
+      margin-top: 5px;
+      border-bottom: 1px solid #cec8c8;
+          
+  }
+
+  .cat-list:hover{
+      animation-name: colorChange;
+      animation-duration: .4s;
+      border-bottom:3px solid #0d416f;
+      cursor: pointer;
+  }
+
+  .showCategories a{
+      color: #cec8c8;
+  }
+  
+  .showCategories a:hover{
+      text-decoration: none;
+      color: white;
+  }
+  
+  .showCategories:hover{
+      height:auto ;
+      
+  }
+ 
+  .current-card{
+    width: 16rem;
+  }
+  .hid{
+      height: 0px;
+  }
+
+  
+  .current-card{
+    margin-bottom: 1rem;
+  }
+  .card{
+      width: 14rem;
+      height: 20rem;
+      background-color: transparent;
+      margin-top: 2rem;
+  }
+
+  .intro{
+    display: block;
+  }
+  .facebook{
+    width: 90%;
+    margin: auto;
+  }
+  .events{
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+
+  .event-details{
+    padding-top: 2rem;
+    height: auto;
+  }
+
+  
+  
+}
+
+
+
+/* ipad responsive */
+
+
+@media screen and (max-width:780px) {
+  .navbar{
+      height: 6rem;
+      background-color: #0d416f;
+      display: flex;
+      align-items: center;
+  }
+  
+  
+  .logo{
+      width: 150px;
+      height: 80px;
+      padding-left: 1 rem;
+  }
+  
+  .logo img{
+      width: 100%;
+      height: 100%;
+  }
+  
+  .categories {
+      display: none;
+  }
+  .contact-email{
+      display: none;
+  }
+  .fafa{
+      display: inline;
+      position: absolute;
+      width: fit-content;
+      right: 2rem;
+  }
+
+  .fafa button{
+      outline: none;
+      border: 1.5px solid white;
+      border-radius: 5px;
+      padding: 5px;
+      background-color: transparent;
+      cursor: pointer;
+  }
+  .fafa img{
+      width: 1.25rem;
+      height: 1rem;
+  }
+  .ctaBtn{
+    display: none;
+  }
+  .showCategories{
+      display: inline;
+      height: 15.7rem;
+      text-align: left;
+      top: 6rem;
+      width: 50%;
+      right: 0px;
+      position: absolute;
+      background-color:#222;
+      transition: height 1s;
+      box-shadow: 1px 1px 4px black;
+      animation-name: fly;
+      animation-duration: 1s;
+      z-index: 1;
+      
+  }
+  .cat-list{
+      width: 100%;
+      margin: auto;
+      display: block;
+      padding: .5rem;
+      margin-top: 5px;
+      border-bottom: 1px solid #cec8c8;
+          
+  }
+
+  .cat-list:hover{
+      animation-name: colorChange;
+      animation-duration: .4s;
+      border-bottom:3px solid #0d416f;
+      cursor: pointer;
+  }
+
+  .showCategories a{
+      color: #cec8c8;
+  }
+  
+  .showCategories a:hover{
+      text-decoration: none;
+      color: white;
+  }
+  
+  .showCategories:hover{
+      height:auto ;
+      
+  }
+ 
+  .current-card{
+    width: 19rem;
+  }
+  .hid{
+      height: 0px;
+  }
+
+  
+  .current-card{
+    margin-bottom: 1rem;
+  }
+  .card{
+      width: 14rem;
+      height: 20rem;
+      background-color: transparent;
+      margin-top: 2rem;
+  }
+
+  .intro{
+    display: block;
+  }
+  .facebook{
+    width: 90%;
+    margin: auto;
+    height: 50rem;
+  }
+  .events{
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+
+  .event-details{
+    padding-top: 2rem;
+    height: auto;
+  }
+
+  
+  
 }

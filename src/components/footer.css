@@ -1,0 +1,390 @@
+@keyframes btn {
+    from { background-color: rgb(8,119,115);}
+    to { background-color:rgb(7, 85, 83) ;}
+}
+
+@keyframes rotat {
+    from { transform: rotate(0deg);}
+    tp { transform: rotate(360deg);}
+}
+
+
+
+.footer{
+    background-color: #e9edf0;
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.about-section{
+    width: 30%;
+}
+
+.logo-section{
+    width: 60%;
+    margin: auto;
+    padding-top: 2rem;
+}
+
+.about-section img{
+    width: 100%;
+}
+
+.para-section{
+    width: 90%;
+    margin: auto;
+}
+.para-section p{
+    padding: 1rem;
+    color:rgb(8,119,115) ;
+}
+
+.btn{
+    width: fit-content;
+    margin: auto;
+    
+}
+.btn button{
+    padding: .7rem;
+    width: 12rem;
+    height: 4rem;
+    background-color: rgb(8,119,115);
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(5, 77, 82, 0.2);
+}
+
+.btn button:hover{
+    animation: btn .5s ease-in-out; 
+     background-color:rgb(7, 85, 83) ; 
+    box-shadow: 0 10px 16px 0 rgba(0, 2, 0, 0.2);
+}
+
+.uni-section{
+    width: 30%;
+
+}
+
+.uni-section li{
+    list-style: none;
+    margin-top: 1rem;
+}
+.uni-section h2{
+    padding: 1rem;
+    color: rgb(8,119,115);
+    font-size: 30px;
+
+}
+
+table a{
+    text-decoration: none;
+    color: rgb(8,119,115);
+    padding: 1rem;
+    
+}
+table tr td{
+    padding: .5rem;
+    font-size: 20px;
+
+}
+.social-icon{
+    position: relative;
+    width: fit-content;
+    top: 5rem;
+}
+.social-icon img{
+    width: 40px;
+    height: 40px;
+    padding: .2rem;
+}
+
+.social-icon img:hover{
+    animation-name: rotat;
+    animation-duration: .5s;
+    transform: rotate(360deg);
+}
+.contact-us{
+    background-color: rgb(7, 85, 83);
+    width: 30%;
+    border-radius: 10px;
+}
+
+.contact-nested{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.contact-us h2{
+    width: fit-content;
+    margin: auto;
+    padding-top: 2rem;
+    color: white;
+}
+
+.contact-icon{
+    width: 50px;
+    height: 50px;
+    
+}
+
+.contact-icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.contact-nested h6{
+    color: whitesmoke;
+    font-size: 22px;
+}
+
+.contct{
+    padding-top: 2rem;
+    width: fit-content;
+    margin: auto;
+    border-bottom:  1px solid white;
+    align-items: center;
+}
+.sub-list{
+    width: 70%;
+    margin: auto;
+}
+.contact-list{
+    align-items: center;
+}
+.contact-list img{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
+.contact-list p{
+    word-spacing: 5px;
+}
+.contact-list{
+    color: white;
+    display: flex;
+    width: fit-content;
+    padding-top: 1rem;
+}
+.copyright-section{
+    width: fit-content;
+    margin: auto;
+}
+
+.copyright-section p{
+    color:rgb(5, 60, 58) ;
+    font-size: 20px;
+}
+
+
+
+/* mobile responsive */
+
+@media screen and (max-width:380px){
+    .footer{
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+    
+    .about-section{
+        width: 90%;
+        margin: auto;
+        border-bottom: 1px solid gray;
+        padding-bottom: 1rem;
+    }
+    
+    .logo-section{
+        width: 70%;
+        margin: auto;
+        padding-top: 2rem;
+    }
+ 
+    .uni-section{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .social-icon{
+        top: 2rem;
+        margin: auto;
+    }
+    .contact-us{
+        background-color: rgb(7, 85, 83);
+        width: 100%;
+        margin-top: 3rem;
+        border-radius: 10px;
+        padding-bottom: 2rem;
+    }
+    
+    .contact-nested{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }
+    .contact-us h2{
+        width: fit-content;
+        margin: auto;
+        padding-top: 2rem;
+        color: white;
+    }
+    
+    .contact-icon{
+        width: 50px;
+        height: 50px;
+        
+    }
+    
+    .contact-icon img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .contact-nested h6{
+        color: whitesmoke;
+        font-size: 22px;
+    }
+    
+    .contct{
+        padding-top: 2rem;
+        width: fit-content;
+        margin: auto;
+        border-bottom:  1px solid white;
+        align-items: center;
+    }
+    .sub-list{
+        width: 70%;
+        margin: auto;
+    }
+    .contact-list{
+        align-items: center;
+    }
+    .contact-list img{
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+    
+    .contact-list p{
+        word-spacing: 5px;
+    }
+    .contact-list{
+        color: white;
+        display: flex;
+        width: fit-content;
+        padding-top: 1rem;
+    }
+
+}
+
+
+/* ipad responsive */
+
+
+
+@media screen and (max-width:780px){
+    .footer{
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+    
+    .about-section{
+        width: 90%;
+        margin: auto;
+        border-bottom: 1px solid gray;
+        padding-bottom: 1rem;
+    }
+    
+    .logo-section{
+        width: 70%;
+        margin: auto;
+        padding-top: 2rem;
+    }
+ 
+    .uni-section{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .social-icon{
+        top: 2rem;
+        margin: auto;
+    }
+    .contact-us{
+        background-color: rgb(7, 85, 83);
+        width: 100%;
+        margin-top: 3rem;
+        border-radius: 10px;
+        padding-bottom: 2rem;
+    }
+    
+    .contact-nested{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }
+    .contact-us h2{
+        width: fit-content;
+        margin: auto;
+        padding-top: 2rem;
+        color: white;
+    }
+    
+    .contact-icon{
+        width: 50px;
+        height: 50px;
+        
+    }
+    
+    .contact-icon img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .contact-nested h6{
+        color: whitesmoke;
+        font-size: 22px;
+    }
+    
+    .contct{
+        padding-top: 2rem;
+        width: fit-content;
+        margin: auto;
+        border-bottom:  1px solid white;
+        align-items: center;
+    }
+    .sub-list{
+        width: 70%;
+        margin: auto;
+    }
+    .contact-list{
+        align-items: center;
+    }
+    .contact-list img{
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+    
+    .contact-list p{
+        word-spacing: 5px;
+    }
+    .contact-list{
+        color: white;
+        display: flex;
+        width: fit-content;
+        padding-top: 1rem;
+    }
+
+}
+
